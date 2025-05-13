@@ -1,9 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-
-class Program
+﻿class Program
 {
     static void Main()
+    {
+        Listas.Exibir(); // Chama o método para trabalhar com listas encadeadas
+        Dicionarios.Exibir();
+    }
+}
+
+public class Listas
+{
+    static public void Exibir()
     {
         LinkedList<int> listaEncadeada = new LinkedList<int>();
 
@@ -21,6 +27,24 @@ class Program
         foreach (int valor in listaEncadeada)
         {
             Console.WriteLine(valor); // Exibindo os valores da lista encadeada
+        }
+    }
+}
+
+public class Dicionarios
+{
+    static public void Exibir()
+    {
+        Dictionary<string, string> dicionario = new Dictionary<string, string>()
+        {
+            { "Nome", "Lucas" },
+            { "Idade", "25" },
+            { "País", "Itália" }
+        };
+
+        foreach (KeyValuePair<string, string> item in dicionario)
+        {
+            Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}"); // Exibindo chave e valor do dicionário
         }
     }
 }
