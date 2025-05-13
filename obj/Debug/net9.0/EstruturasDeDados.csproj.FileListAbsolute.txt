@@ -12,3 +12,4 @@ C:\Dev.NET\Estudos\EstruturasDeDados\obj\Debug\net9.0\refint\EstruturasDeDados.d
 C:\Dev.NET\Estudos\EstruturasDeDados\obj\Debug\net9.0\EstruturasDeDados.pdb
 C:\Dev.NET\Estudos\EstruturasDeDados\obj\Debug\net9.0\EstruturasDeDados.genruntimeconfig.cache
 C:\Dev.NET\Estudos\EstruturasDeDados\obj\Debug\net9.0\ref\EstruturasDeDados.dll
+C:\Dev.NET\Estudos\EstruturasDeDados\obj\Debug\net9.0\EstruturasDeDados.sourcelink.json
