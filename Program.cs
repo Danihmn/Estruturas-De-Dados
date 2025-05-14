@@ -3,13 +3,24 @@
     static void Main()
     {
         Listas.Exibir(); // Chama o método para trabalhar com listas encadeadas
-        Dicionarios.Exibir();
+
+        Console.WriteLine("====================================="); // Separador para melhor visualização
+
+        Dicionarios.Exibir(); // Chama o método para trabalhar com dicionários
+
+        Console.WriteLine("====================================="); // Separador para melhor visualização
+
+        Pilhas.Exibir(); // Chama o método para trabalhar com pilhas
+
+        Console.WriteLine("====================================="); // Separador para melhor visualização
+
+        Filas.Exibir(); // Chama o método para trabalhar com filas
     }
 }
 
 public class Listas
 {
-    static public void Exibir()
+    public static void Exibir()
     {
         LinkedList<int> listaEncadeada = new LinkedList<int>();
 
@@ -33,7 +44,7 @@ public class Listas
 
 public class Dicionarios
 {
-    static public void Exibir()
+    public static void Exibir()
     {
         Dictionary<string, string> dicionario = new Dictionary<string, string>()
         {
@@ -45,6 +56,46 @@ public class Dicionarios
         foreach (KeyValuePair<string, string> item in dicionario)
         {
             Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}"); // Exibindo chave e valor do dicionário
+        }
+    }
+}
+
+public class Pilhas
+{
+    public static void Exibir()
+    {
+        Stack<int> pilha = new Stack<int>();
+
+        // Adicionando elementos
+        pilha.Push(12);
+        pilha.Push(13);
+        pilha.Push(14);
+
+        pilha.Pop(); // Remove o elemento do topo da pilha
+
+        foreach (int valor in pilha)
+        {
+            Console.WriteLine(valor); // Exibindo os valores da pilha
+        }
+    }
+}
+
+public class Filas
+{
+    public static void Exibir()
+    {
+        Queue<int> fila = new Queue<int>();
+
+        // Adicionando elementos
+        fila.Enqueue(1);
+        fila.Enqueue(2);
+        fila.Enqueue(3);
+
+        fila.Dequeue(); // Remove o elemento do início da fila
+
+        foreach (int item in fila)
+        {
+            Console.WriteLine(item); // Exibindo os valores da fila
         }
     }
 }
