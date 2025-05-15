@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstruturasDeDados")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+816c8c2e16b71509f0b9f723d22d91dfd5698f79")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a99796173339d71fb15ac2c3f2ec37a41be3031")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstruturasDeDados")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstruturasDeDados")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

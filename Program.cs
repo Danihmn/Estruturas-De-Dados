@@ -44,6 +44,13 @@
         arvoreBinaria.Inserir(40);
 
         arvoreBinaria.Iniciar();
+
+        Console.WriteLine("====================================="); // Separador para melhor visualização
+
+        Grafo grafo = new Grafo(4);
+        grafo.AdicionarAresta(0, 1);
+        grafo.AdicionarAresta(0, 4);
+        grafo.AdicionarAresta(3, 5);
     }
 }
 
@@ -240,5 +247,39 @@ public class ArvoreBinaria
     public void Iniciar()
     {
         Percorrer(Raiz);
+    }
+}
+
+public class Grafo
+{
+    public int NumeroVertices;
+    public Dictionary<int, List<int>> adj;
+
+    public Grafo(int vertices)
+    {
+        NumeroVertices = vertices;
+        adj = new Dictionary<int, List<int>>();
+
+        for (int i = 0; i < NumeroVertices; i++)
+        {
+            adj[i] = new List<int>();
+        }
+    }
+
+    public void AdicionarAresta(int origem, int destino)
+    {
+        adj[origem].Add(destino);
+    }
+
+    public void Mostrar()
+    {
+        foreach (var vertice in adj)
+        {
+            Console.WriteLine($"O vertice {vertice.Key} está ligado aos vertices: ");
+            foreach (var vertice2 in vertice.Value)
+            {
+                Console.Write("vertice2");
+            }
+        }
     }
 }
