@@ -33,6 +33,17 @@
 
         // Percorrendo a árvore
         arvore.Percorrer(arvore.Raiz); // Chama o método para percorrer a árvore a partir da raiz
+
+        Console.WriteLine("====================================="); // Separador para melhor visualização
+
+        // Criando uma árvore binária e adicionando elementos
+        ArvoreBinaria arvoreBinaria = new ArvoreBinaria(); // Cria uma nova árvore binária
+        arvoreBinaria.Inserir(10);
+        arvoreBinaria.Inserir(20);
+        arvoreBinaria.Inserir(30);
+        arvoreBinaria.Inserir(40);
+
+        arvoreBinaria.Iniciar();
     }
 }
 
@@ -162,5 +173,72 @@ public class Arvore<A>
                 Percorrer(filhos); // Chama o método recursivamente para cada filho
             }
         }
+    }
+}
+
+public class ArvoreBinariaNos
+{
+    public int Valor;
+    public ArvoreBinariaNos Esquerda;
+    public ArvoreBinariaNos Direita;
+
+    public ArvoreBinariaNos(int valor)
+    {
+        Valor = valor; // Inicializa o valor do nó
+        Esquerda = null; // Inicializa o nó esquerdo como nulo
+        Direita = null; // Inicializa o nó direito como nulo
+    }
+}
+
+// Classe que representa os nós da árvore
+public class ArvoreBinaria
+{
+    public ArvoreBinariaNos Raiz; // Define a raiz como nó principal
+
+    public ArvoreBinaria()
+    {
+        Raiz = null;
+    }
+
+    // Adiciona ao nó principal um valor
+    public void Inserir(int valor)
+    {
+        Raiz = AdicionarElemento(Raiz, valor);
+    }
+
+    // Método que adiciona os elementos na árvore binária
+    public ArvoreBinariaNos AdicionarElemento(ArvoreBinariaNos no, int valor)
+    {
+        if (no == null)
+        {
+            no = new ArvoreBinariaNos(valor); // Se o nó for nulo, cria um novo nó com o valor
+            return no; // Retorna o novo nó
+        }
+
+        if (valor < no.Valor)
+        {
+            no.Esquerda = AdicionarElemento(no.Esquerda, valor);
+        }
+        else
+        {
+            no.Direita = AdicionarElemento(no.Direita, valor);
+        }
+
+        return no; // Retorna o nó atualizado
+    }
+
+    public void Percorrer(ArvoreBinariaNos raiz)
+    {
+        if (raiz != null)
+        {
+            Percorrer(raiz.Esquerda); // Percorre a subárvore esquerda
+            Console.Write(raiz.Valor + " "); // Exibe o valor do nó atual
+            Percorrer(raiz.Direita); // Percorre a subárvore direita
+        }
+    }
+
+    public void Iniciar()
+    {
+        Percorrer(Raiz);
     }
 }
